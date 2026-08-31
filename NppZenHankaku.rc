@@ -1,0 +1,52 @@
+#include <windows.h>
+#include "src/resource.h"
+
+// LICENSE と同じ著作権者を書く
+#define ZH_COMPANY   "RivieraSystems"
+#define ZH_COPYRIGHT "Copyright (c) 2026 RivieraSystems. MIT License."
+
+#define ZH_VER_MAJOR 1
+#define ZH_VER_MINOR 0
+#define ZH_VER_PATCH 0
+#define ZH_VER_BUILD 0
+#define ZH_VER_STRING "1.0.0.0"
+
+IDI_HAN_LIGHT ICON "res/han_light.ico"
+IDI_HAN_DARK  ICON "res/han_dark.ico"
+IDI_ZEN_LIGHT ICON "res/zen_light.ico"
+IDI_ZEN_DARK  ICON "res/zen_dark.ico"
+
+VS_VERSION_INFO VERSIONINFO
+	FILEVERSION    ZH_VER_MAJOR, ZH_VER_MINOR, ZH_VER_PATCH, ZH_VER_BUILD
+	PRODUCTVERSION ZH_VER_MAJOR, ZH_VER_MINOR, ZH_VER_PATCH, ZH_VER_BUILD
+	FILEFLAGSMASK  VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+	FILEFLAGS      VS_FF_DEBUG
+#else
+	FILEFLAGS      0x0L
+#endif
+	FILEOS         VOS_NT_WINDOWS32
+	FILETYPE       VFT_DLL
+	FILESUBTYPE    VFT2_UNKNOWN
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		// 0409 = 英語 (米国) / 04B0 = Unicode。rc.exe を /l"0x0409" で呼ぶ設定に合わせている。
+		// この言語 ID で日本語を書くと環境によって文字化けするため、値は ASCII に限る。
+		BLOCK "040904B0"
+		BEGIN
+			VALUE "CompanyName",      ZH_COMPANY
+			VALUE "FileDescription",  "NppZenHankaku - full-width/half-width converter for Notepad++"
+			VALUE "FileVersion",      ZH_VER_STRING
+			VALUE "InternalName",     "NppZenHankaku"
+			VALUE "LegalCopyright",   ZH_COPYRIGHT
+			VALUE "OriginalFilename", "NppZenHankaku.dll"
+			VALUE "ProductName",      "NppZenHankaku"
+			VALUE "ProductVersion",   ZH_VER_STRING
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1200
+	END
+END

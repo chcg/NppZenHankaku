@@ -1,0 +1,9 @@
+* text=auto
+
+*.ico binary
+*.dll binary
+*.exe binary
+*.pdb binary
+
+# rc.exe は /l"0x0409" で呼んでいるので、.rc は ASCII のまま扱う
+*.rc text

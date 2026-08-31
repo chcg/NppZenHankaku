@@ -1,0 +1,48 @@
+# Visual Studio / MSBuild
+.vs/
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.aps
+*.VC.db
+*.VC.VC.opendb
+
+# Build outputs
+bin/
+obj/
+x64/
+Debug/
+Release/
+out/
+build/
+
+# Intermediate / debug artifacts
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.idb
+*.ipdb
+*.iobj
+*.tlog
+*.log
+*.lastbuildstate
+
+# Local test binaries
+NppZenHankakuTest.exe
+NppZenHankakuTest.pdb
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*~
+
+# Icon generation scratch (final icons live in res/*.ico)
+res/icons_generation/
+
+# Throwaway scratch for one-off measurements and A/B builds.
+.work/

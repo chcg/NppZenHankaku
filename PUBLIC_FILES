@@ -1,0 +1,34 @@
+# 公開してよいファイルの許可リスト。これが正本。
+# パスは git ls-files と同じく / 区切り。空行と # で始まる行は無視する。
+# ファイルを公開に足すときは、先にこの一覧へ書いてから git add する。
+# build.bat が tools/check_public_files.ps1 で突き合わせ、余分があれば失敗する。
+
+.gitattributes
+.gitignore
+LICENSE
+NppZenHankaku.rc
+NppZenHankaku.sln
+NppZenHankaku.vcxproj
+PUBLIC_FILES
+README.md
+build.bat
+npp/Notepad_plus_msgs.h
+npp/PluginInterface.h
+npp/Scintilla.h
+res/han_dark.ico
+res/han_light.ico
+res/zen_dark.ico
+res/zen_light.ico
+src/DbcsCodec.cpp
+src/DbcsCodec.h
+src/NppZenHankaku.cpp
+src/PluginDefinition.cpp
+src/PluginDefinition.h
+src/ToolbarIcons.cpp
+src/ToolbarIcons.h
+src/converter.cpp
+src/converter.h
+src/converter_test.cpp
+src/resource.h
+tools/check_public_files.ps1
+tools/check_version_info.ps1
